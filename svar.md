@@ -60,3 +60,62 @@ SELECT * FROM bolche ORDER BY RANDOM() LIMIT (1)
 SELECT * FROM bolche ORDER BY RANDOM() LIMIT (1)
 ```
 
+## Øvelse 3
+
+
+## Øvelse 4
+
+4.2
+```SQL
+
+SELECT bolche.name FROM bolche INNER JOIN color ON bolche.color_id = color.id where color.name = "red"
+```
+
+4.3
+```SQL
+
+SELECT bolche.name FROM bolche INNER JOIN color ON bolche.color_id = color.id where color.name = "red" OR color.name="blue"
+```
+
+4.4
+```SQL
+SELECT bolche.name FROM bolche INNER JOIN color ON bolche.color_id = color.id where color.name != "red"  ORDER BY bolche.name ASC
+```
+
+4.5
+```SQL
+SELECT bolche.name FROM bolche INNER JOIN color ON bolche.color_id = color.id where bolche.name LIKE "b%"
+```
+
+4.6
+```SQL
+
+SELECT bolche.name FROM bolche INNER JOIN color ON bolche.color_id = color.id where bolche.name LIKE "%e%"
+```
+
+4.7
+```SQL
+SELECT bolche.name FROM bolche INNER JOIN color ON bolche.color_id = color.id where bolche.[weight (g)]<10
+```
+
+4.8
+```SQL
+SELECT bolche.name FROM bolche INNER JOIN color ON bolche.color_id = color.id where bolche.[weight (g)] BETWEEN 10 AND 12 ORDER BY bolche.name, bolche.[weight (g)] 
+```
+(forkert?) den sorterer ikke korrekt alfabetisk
+
+4.9
+```SQL
+SELECT bolche.name FROM bolche INNER JOIN color ON bolche.color_id = color.id ORDER BY bolche.[weight (g)] DESC LIMIT (3)
+```
+
+4.10
+```SQL
+SELECT * FROM bolche INNER JOIN color ON bolche.color_id = color.id ORDER BY RANDOM() LIMIT (1)
+```
+
+
+## Øvelse 5
+```SQL
+SELECT name, (price * 3.5) AS net_price_pr_kg, (price * 3.5) AS gross_price_per_kg FROM bolche ORDER BY name ASC
+```
