@@ -119,3 +119,21 @@ SELECT * FROM bolche INNER JOIN color ON bolche.color_id = color.id ORDER BY RAN
 ```SQL
 SELECT name, (price * 3.5) AS net_price_pr_kg, (price * 3.5) AS gross_price_per_kg FROM bolche ORDER BY name ASC
 ```
+
+## Øvelse 6
+
+6.3
+```SQL
+SELECT COUNT (*) AS antal_bolcher FROM bolche WHERE "weight (g)" < 15
+```
+
+6.4
+```SQL
+
+SELECT COUNT (DISTINCT id) AS amount_of_different FROM bolche
+```
+
+6.5
+
+
+6.6
